@@ -9,6 +9,9 @@ spring:
     username: root
     password: 1234
     url: jdbc:mysql://127.0.0.1:3306/bsmall?characterEncoding=utf-8&userSSL=false
+  redis:
+    host: 127.0.0.1
+    port: 6379
 logging:
   pattern:
     console: "[%thread] %-5level %logger{36} - %msg%n"

@@ -8,7 +8,7 @@
         <result column="order_no" jdbcType="VARCHAR" property="orderNo"/>
         <result column="product_id" jdbcType="INTEGER" property="productId"/>
         <result column="product_name" jdbcType="VARCHAR" property="productName"/>
-        <result column="product_img" jdbcType="VARCHAR" property="productImg"/>
+        <result column="product_img" jdbcType="VARCHAR" property="productImage"/>
         <result column="current_unit_price" jdbcType="INTEGER" property="currentUnitPrice"/>
         <result column="quantity" jdbcType="INTEGER" property="quantity"/>
         <result column="total_price" jdbcType="INTEGER" property="totalPrice"/>
@@ -19,4 +19,16 @@
         id, user_id, order_no, product_id, product_name, product_image, current_unit_price, quantity
           , total_price, create_time, update_time
     </sql>
+    <insert id="batchInsert" parameterType="list">
+        INSERT INTO mall_order_item (user_id, order_no,
+        product_id, product_name, product_image,
+        current_unit_price, quantity, total_price, create_time, update_time)
+        VALUES
+        <foreach collection="orderItemList" index="index" item="item" separator=",">
+            (#{item.userId}, #{item.orderNo},
+            #{item.productId}, #{item.productName}, #{item.productImage},
+            #{item.currentUnitPrice}, #{item.quantity}, #{item.totalPrice},
+            #{item.createTime}, #{item.updateTime})
+        </foreach>
+    </insert>
 </mapper>

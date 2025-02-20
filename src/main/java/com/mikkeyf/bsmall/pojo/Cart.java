@@ -16,20 +16,12 @@ import java.util.Date;
  * @version: 1.0
  */
 @Data
-@TableName("mall_cart")
 @AllArgsConstructor
 public class Cart {
-    private Integer id;
-
     private Integer productId;
-
-    private Integer userId;
 
     private Integer quantity;
 
-    private Integer selected;
+    private Boolean productSelected;
 
-    private Date createTime;
-
-    private Date updateTime;
 }

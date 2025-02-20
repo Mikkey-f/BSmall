@@ -14,7 +14,7 @@ import java.math.BigDecimal;
  * @version: 1.0
  */
 @Data
-public class cartProductVo {
+public class CartProductVo {
 
     private Integer productId;
 

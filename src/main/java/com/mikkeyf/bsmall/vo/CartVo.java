@@ -17,7 +17,7 @@ import java.util.List;
 @Data
 public class CartVo {
 
-    private List<cartProductVo> productVoList;
+    private List<CartProductVo> productVoList;
 
     private boolean selectedAll;
 

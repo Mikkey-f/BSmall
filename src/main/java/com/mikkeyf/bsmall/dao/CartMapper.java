@@ -1,6 +1,7 @@
 package com.mikkeyf.bsmall.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mikkeyf.bsmall.pojo.Cart;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,5 +14,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @version: 1.0
  */
 @Mapper
-public interface CartMapper extends BaseMapper<CartMapper> {
+public interface CartMapper extends BaseMapper<Cart> {
 }

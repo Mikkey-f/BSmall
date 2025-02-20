@@ -1,9 +1,11 @@
 package com.mikkeyf.bsmall.pojo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -18,34 +20,37 @@ import java.util.Date;
 @Data
 @TableName("mall_order")
 @AllArgsConstructor
+@NoArgsConstructor
 public class Order {
+
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     private String orderNo;
 
     private Integer userId;
 
-    private Integer totalPrice;
+    private Integer shippingId;
 
-    private String receiverName;
-
-    private String receiverMobile;
-
-    private String receiverAddress;
-
-    private Integer orderStatus;
-
-    private Integer postage;
+    private BigDecimal payment;
 
     private Integer paymentType;
 
-    private Date deliveryTime;
+    private Integer postage;
 
-    private Date payTime;
+    private Integer status;
+
+    private Date paymentTime;
+
+    private Date sendTime;
 
     private Date endTime;
 
+    private Date closeTime;
+
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 }
