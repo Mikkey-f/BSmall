@@ -23,7 +23,14 @@ public enum ResponseEnum {
     USERNAME_OR_PASSWORD_ERROR(7, "用户名或密码错误"),
     NOT_THIS_PRODUCT(8, "没有此商品"),
     PRODUCT_OFF_SALE_OR_DELETE(9, "商品下架或者删除"),
-    NEED_LOGIN(10, "用户未登录,请先登录")
+    NEED_LOGIN(10, "用户未登录,请先登录"),
+    PRODUCT_STOCK_ERROR(11, "库存不正确"),
+    CART_PRODUCT_NOT_EXIST(12, "购物车商品不存在"),
+    DELETE_SHIPPING_FAIL(13, "删除失败"),
+    UPDATE_SHIPPING_FAIL(14, "修改失败"),
+    SHIPPING_NOT_EXIST(15, "收获地址不存在"),
+    NOT_SELECTED_ITEM(16, "请选择商品后下单"),
+    ITEM_STOCK_NOT_ADEQUATE(17, "商品库存不足")
     ;
 
     Integer code;

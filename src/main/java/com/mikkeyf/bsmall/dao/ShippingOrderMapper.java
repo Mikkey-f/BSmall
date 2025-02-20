@@ -1,18 +1,19 @@
 package com.mikkeyf.bsmall.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mikkeyf.bsmall.pojo.PayInfo;
+import com.mikkeyf.bsmall.pojo.Shipping;
+import com.mikkeyf.bsmall.pojo.ShippingOrder;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @projectName: BSmall
  * @package: com.mikkeyf.bsmall.dao
- * @className: payInfo
+ * @className: ShippingItemMapper
  * @author: mikkeyf
  * @description: TODO
- * @date: 2025/1/25 0:47
+ * @date: 2025/2/18 21:03
  * @version: 1.0
  */
 @Mapper
-public interface PayInfoMapper extends BaseMapper<PayInfo> {
+public interface ShippingOrderMapper extends BaseMapper<ShippingOrder> {
 }
